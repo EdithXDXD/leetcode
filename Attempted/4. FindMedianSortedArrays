@@ -1,0 +1,55 @@
+4. FindMedianSortedArrays
+class Solution {
+    public double findMedianSortedArrays(int[] nums1, int[] nums2) {
+        double median = 0;
+        int size1 = nums1.length, size2 = nums2.length;
+        int size = size1 + size2;
+        int i = 0, j = 0;
+        if (size % 2 == 0) {
+            while(true){
+                if (i == size1 - 1){
+                    nums[size/2 - size1]
+                }
+            }
+        }
+        else median = nums[size/2]; 
+
+        return median;
+        
+        
+    }
+    public double calMedian(int size, int[] nums){
+        double median;
+        if (size%2 == 0) median = (nums[size/2 - 1] + nums[size/2])/2;
+        else median = nums[size/2]; 
+        return median;
+    }
+}
+
+//divide and conquer
+//长度不一定相等，所以要考虑多个base case ...TODO这个方法再想想吧
+// class Solution {
+//     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
+//         double median1, median2;
+//         int size1 = nums1.length, size2 = nums2.length;
+        
+//         median1 = calMedian(size1,nums1);
+//         median2 = calMedian(size2,nums2);
+        
+//         if (median1 == median2) return median1;
+//         else if (median1 < median2){
+//             return findMedianSortedArrays(Arrays.copyOfRange(nums1,size1/2,size1-1),
+//                                   Arrays.copyOfRange(nums2,0,size2/2+1));
+//         }
+//         return findMedianSortedArrays(Arrays.copyOfRange(nums1,0,size1/2+1),
+//                                   Arrays.copyOfRange(nums2,size2/2+1,size2+1));
+        
+        
+//     }
+//     public double calMedian(int size, int[] nums){
+//         double median;
+//         if (size%2 == 0) median = (nums[size/2 - 1] + nums[size/2])/2;
+//         else median = nums[size/2]; 
+//         return median;
+//     }
+// }
